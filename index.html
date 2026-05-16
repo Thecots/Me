@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>David Cots — Full Stack Developer</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo">David Cots</a>
+      <ul class="nav-links">
+        <li><a href="#about">Sobre mí</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#experience">Experiencia</a></li>
+        <li><a href="#contact" class="nav-cta">Contacto</a></li>
+      </ul>
+      <button class="burger" aria-label="Menú" onclick="toggleMenu()">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <ul class="nav-mobile" id="mobileMenu">
+      <li><a href="#about" onclick="toggleMenu()">Sobre mí</a></li>
+      <li><a href="#skills" onclick="toggleMenu()">Skills</a></li>
+      <li><a href="#experience" onclick="toggleMenu()">Experiencia</a></li>
+      <li><a href="#contact" onclick="toggleMenu()">Contacto</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero-inner container">
+      <div class="hero-text reveal-up">
+        <p class="hero-kicker">Full Stack Developer</p>
+        <h1 class="hero-name">Hola, soy<br/><em>David Cots</em></h1>
+        <p class="hero-desc">
+          Desarrollo software a medida y soluciones Full Stack preparadas para resolver problemas reales de tu negocio. 
+          Combino mi experiencia diaria optimizando sistemas en el Grupo Volkswagen con el desarrollo de software 
+          independiente, transformando ideas complejas en herramientas eficientes y escalables.
+        </p>
+        <div class="hero-actions">
+          <a href="#experience" class="btn btn-primary">Ver trayectoria</a>
+          <a href="#contact" class="btn btn-outline">Contactar</a>
+        </div>
+      </div>
+      <div class="hero-photo-wrap reveal-up delay-2">
+        <div class="photo-frame">
+          <img src="fotoperfil.jpeg" alt="David Cots" class="hero-photo" />
+        </div>
+        <div class="photo-badge">
+          <span class="badge-dot"></span>
+          Disponible para proyectos
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-tag">01 — Sobre mí</span>
+        <h2>Un poco sobre mí</h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-text">
+          <p class="reveal-up">
+            Soy desarrollador Full Stack con más de <strong>4 años de trayectoria en el área de ingeniería del Grupo Volkswagen</strong>.
+            En mi día a día, diseño e implemento desde arquitecturas web robustas con <strong>React y Django</strong> hasta aplicaciones
+            interactivas en 3D. Trabajar en este entorno me ha enseñado a crear código limpio, seguro y capaz de soportar flujos de trabajo exigentes.
+          </p>
+          <p class="reveal-up delay-1">
+            Como desarrollador freelance, traduzco esa experiencia corporativa en soluciones ágiles para empresas y creadores.
+            Estoy especializado en construir <strong>herramientas de software y automatizaciones a medida</strong>: desde sistemas que eliminan tareas
+            repetitivas en negocios, hasta aplicaciones de gestión interna y herramientas técnicas para
+            <strong>streamers con grandes audiencias</strong>.
+          </p>
+          <p class="reveal-up delay-2">
+            Mi filosofía se basa en la constancia y la mejora continua, valores que comparto con mi pasión por el deporte.
+            Me apasiona analizar las necesidades de cada cliente para ofrecerle la tecnología exacta que necesita, integrando herramientas
+            actuales e IA para optimizar los tiempos de desarrollo y maximizar el impacto de cada entrega.
+          </p>
+        </div>
+        <div class="about-cards reveal-up delay-1">
+          <div class="info-card">
+            <strong>4+</strong>
+            <span>Años de experiencia</span>
+          </div>
+          <div class="info-card">
+            <strong>Full Stack</strong>
+            <span>Web, scripts &amp; servicios</span>
+          </div>
+          <div class="info-card info-card-vw">
+            <span>Trabajo actual</span>
+            <img src="vwgs.svg" alt="Grupo Volkswagen" class="vw-logo" />
+          </div>
+          <div class="info-card">
+            <strong>Freelance</strong>
+            <span>Disponible</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="bg-light">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-tag">02 — Skills</span>
+        <h2>Tecnologías y herramientas</h2>
+      </div>
+      <div class="skills-grid">
+        <div class="skill-card reveal-up">
+          <div class="skill-icon">⬡</div>
+          <h3>Frontend</h3>
+          <ul>
+            <li>React</li>
+            <li>HTML5 / CSS3</li>
+            <li>JavaScript / TypeScript</li>
+          </ul>
+        </div>
+        <div class="skill-card reveal-up delay-1">
+          <div class="skill-icon">◈</div>
+          <h3>Backend</h3>
+          <ul>
+            <li>Node.js</li>
+            <li>Django / Python</li>
+            <li>REST APIs / SQL</li>
+          </ul>
+        </div>
+        <div class="skill-card reveal-up delay-2">
+          <div class="skill-icon">◉</div>
+          <h3>Experiencias interactivas</h3>
+          <ul>
+            <li>Unreal Engine 5</li>
+            <li>Unity</li>
+            <li>Scripts &amp; automatización</li>
+          </ul>
+        </div>
+        <div class="skill-card reveal-up delay-3">
+          <div class="skill-icon">◎</div>
+          <h3>Otros</h3>
+          <ul>
+            <li>Git / Docker</li>
+            <li>IA &amp; Prompting</li>
+            <li>Resolución de problemas</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-tag">03 — Experiencia</span>
+        <h2>Trayectoria profesional</h2>
+      </div>
+      <div class="timeline">
+
+        <div class="timeline-item reveal-up">
+          <div class="tl-marker">
+            <div class="tl-dot"></div>
+            <div class="tl-line"></div>
+          </div>
+          <div class="tl-content">
+            <div class="tl-header">
+              <div>
+                <h3>Ingeniero de Software</h3>
+                <span class="tl-company">Grupo Volkswagen</span>
+              </div>
+              <span class="tl-date">2022 — Actualidad</span>
+            </div>
+            <p>
+              Desarrollo de soluciones de software de extremo a extremo dentro del área de ingeniería en uno de los grupos automovilísticos
+              líderes del mundo. Mi trabajo abarca todo el ciclo de desarrollo: desde la creación de aplicaciones web y plataformas internas
+              con <strong>React, Django y Node.js</strong>, hasta el diseño de herramientas interactivas con <strong>Unreal Engine y Unity</strong>
+              para simulación técnica. Construyo sistemas robustos utilizados por <strong>miles de usuarios</strong> dentro de la organización,
+              en proyectos de <strong>alto nivel y grandes presupuestos</strong>.
+              Los detalles específicos están sujetos a acuerdos de confidencialidad.
+            </p>
+            <div class="tl-tags">
+              <span class="tag">React / Django</span>
+              <span class="tag">Full Stack</span>
+              <span class="tag">Unreal / Unity</span>
+              <span class="tag">Herramientas internas</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal-up delay-1">
+          <div class="tl-marker">
+            <div class="tl-dot"></div>
+          </div>
+          <div class="tl-content">
+            <div class="tl-header">
+              <div>
+                <h3>Desarrollador Freelance</h3>
+                <span class="tl-company">Proyectos independientes</span>
+              </div>
+              <span class="tl-date">2021 — Actualidad</span>
+            </div>
+            <p>
+              Conceptualización, diseño y desarrollo de software a medida para clientes independientes.
+              Especializado en la creación de <strong>herramientas técnicas y plataformas de gestión para streamers de alto perfil</strong>,
+              optimizadas para integrarse en sus flujos de trabajo y soportar picos de uso masivos.
+              En paralelo, diseño scripts y herramientas de automatización para optimizar la operativa interna de negocios y pymes.
+            </p>
+            <div class="tl-tags">
+              <span class="tag">Desarrollo a medida</span>
+              <span class="tag">Herramientas técnicas</span>
+              <span class="tag">Automatización</span>
+              <span class="tag">Soluciones de software</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-tag">04 — Contacto</span>
+        <h2>Hablemos</h2>
+        <p class="section-note">¿Tienes un proyecto o una oportunidad? Escríbeme y te respondo pronto.</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info reveal-up">
+          <a href="mailto:thecots22@gmail.com" class="contact-row">
+            <span class="contact-label">Email</span>
+            <span>thecots22@gmail.com</span>
+          </a>
+          <a href=https://www.linkedin.com/in/david-cots-a80b25224 target="_blank" rel="noopener" class="contact-row">
+            <span class="contact-label">LinkedIn</span>
+            <span>https://www.linkedin.com/in/david-cots-a80b25224</span>
+          </a>
+          <a href="https://github.com/thecots" target="_blank" rel="noopener" class="contact-row">
+            <span class="contact-label">GitHub</span>
+            <span>github.com/thecots</span>
+          </a>
+        </div>
+        <form class="contact-form reveal-up delay-2" onsubmit="handleSubmit(event)">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Nombre</label>
+              <input type="text" id="name" placeholder="Tu nombre" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" placeholder="tu@email.com" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="message">Mensaje</label>
+            <textarea id="message" rows="5" placeholder="Cuéntame sobre tu proyecto..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Enviar mensaje</button>
+          <p class="form-note" id="formNote"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container footer-inner">
+      <span>© 2026 David Cots</span>
+      <span>Full Stack Developer</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
