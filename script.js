@@ -9,16 +9,26 @@ function toggleMenu() {
   document.getElementById('mobileMenu').classList.toggle('open');
 }
 
-// Scroll reveal
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-}, { threshold: 0.1 });
-
-document.querySelectorAll('.reveal-up').forEach(el => observer.observe(el));
-
-// Activate hero immediately on load
+// Scroll reveal — set up inside load so GitHub Pages doesn't race
 window.addEventListener('load', () => {
+  // Hero elements visible immediately
   document.querySelectorAll('#hero .reveal-up').forEach(el => el.classList.add('visible'));
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        observer.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+
+  document.querySelectorAll('.reveal-up').forEach(el => observer.observe(el));
+
+  // Fallback: if anything is still invisible after 1.5s, force show it
+  setTimeout(() => {
+    document.querySelectorAll('.reveal-up:not(.visible)').forEach(el => el.classList.add('visible'));
+  }, 1500);
 });
 
 // Active nav link
