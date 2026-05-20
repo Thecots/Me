@@ -56,6 +56,23 @@ function toggleFaq(btn) {
   }
 }
 
+// Copy to clipboard on contact rows (script is at bottom of body — no DOMContentLoaded needed)
+document.querySelectorAll('.contact-row[href^="mailto:"], .contact-row[href^="tel:"]').forEach(link => {
+  link.addEventListener('click', (e) => {
+    e.preventDefault();
+    const span = link.querySelector('span:last-child');
+    const original = span.textContent.trim();
+    navigator.clipboard.writeText(original).then(() => {
+      span.textContent = '¡Copiado!';
+      link.style.color = 'var(--blue-md)';
+      setTimeout(() => {
+        span.textContent = original;
+        link.style.color = '';
+      }, 2000);
+    });
+  });
+});
+
 // Contact form
 function handleSubmit(e) {
   e.preventDefault();
